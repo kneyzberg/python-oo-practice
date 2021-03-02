@@ -17,3 +17,16 @@ class SerialGenerator:
     >>> serial.generate()
     100
     """
+    def __init__(self, start):
+        """Initializes a serial number instance with a default value"""
+        self.default = start - 1
+        self.start = start - 1
+    
+    def generate(self):
+        """Returns next sequential serial number"""
+        self.start += 1
+        return self.start
+    
+    def reset(self):
+        """Resets serial numaber to its default value"""
+        self.start = self.default
