@@ -21,6 +21,9 @@ class SerialGenerator:
         """Initializes a serial number instance with a default value"""
         self.default = start - 1
         self.start = start - 1
+
+    def __repr__(self):
+        return f"<SerialGenerator start={self.default+1} next={self.start}>"
     
     def generate(self):
         """Returns next sequential serial number"""
